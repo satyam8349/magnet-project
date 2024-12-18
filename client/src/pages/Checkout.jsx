@@ -12,7 +12,7 @@ import { loadStripe } from "@stripe/stripe-js";
 import { Elements, CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 
 // Load Stripe with your public key
-const stripePromise = loadStripe("pk_test_51QWwzu02vwTVClLcZB1WSJoVUn0ouJJrkgxJlhryu8T2Luzb2071a1CF152jTjyVcC9YFH16yYd518q7G4xwGfYV00GccIYdAV");
+const stripePromise = loadStripe("pk_test_51QXOM7G6MwIOAj60RJ4y6Vq6GLiYfxc6SF1lPeWGjOKOpNyCutj2SEpimie359nksPs2GjxAx6qyyt7fnirh16rV0057oP2rcm");
 
 const CheckoutForm = ({ totalAmount, products }) => {
   const stripe = useStripe();
@@ -69,11 +69,11 @@ const CheckoutForm = ({ totalAmount, products }) => {
         alert("Payment Successful!");
         
         // Redirect to Thank You page after success
-        navigate('/thankyou');
+      
       }
     } catch (error) {
       console.error("Error processing payment:", error);
-      navigate('/failed');
+      
     } finally {
       setIsProcessing(false);
     }

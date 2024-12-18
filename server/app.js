@@ -16,7 +16,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Initialize Stripe
-const stripe = Stripe(process.env.STRIPE_SECRET_KEY || "sk_test_51QWwzu02vwTVClLctyYBaf2h73PplOhyG0srtO1ADwGRuwQP06hWgQF9JcC7EWAcjS9mdSj9ANzOuCMV37GM4ULx00y7NPphna");
+const stripe = Stripe("sk_test_51QXOM7G6MwIOAj60WVTQtDWetTSUt2bExZ0bPVXbvpmKFBxFhhcIt64F9HEhS3Us4FocrbHC93jEyibJR2AcdYLB00o4irRfIQ");
 
 // Middleware
 app.use(cors());
@@ -60,3 +60,4 @@ app.post("/api/payment", async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
